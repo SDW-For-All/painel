@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel SDW For All</title>
+    <meta name="description" content="Painel de dados do projeto SDW For All — acesso a agua tratada e saneamento em comunidades rurais">
+    <meta name="theme-color" content="#2A7B7D">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Painel SDW For All">
+    <meta property="og:description" content="Painel de dados do projeto SDW For All — acesso a agua tratada e saneamento em comunidades rurais">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://painel.sdwforall.com">
+    <meta property="og:image" content="https://www.sdwforall.com/web/image/website/1/logo/SDW%20for%20All?unique=4cece44">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__brand">
+            <img src="assets/logo.png" alt="SDW For All" class="header__logo">
+            <span class="header__title">Painel <span class="header__title-full">SDW For All</span><span class="header__title-short">SDW</span></span>
+        </div>
+        <div class="header__accent"></div>
+    </header>
+
+    <main class="dashboard">
+        <div class="dashboard__loader" id="loader">
+            <div class="ripple">
+                <div class="ripple__ring"></div>
+                <div class="ripple__ring"></div>
+                <div class="ripple__ring"></div>
+            </div>
+            <p class="dashboard__loader-text">Carregando painel</p>
+        </div>
+
+        <iframe
+            id="dashboard-iframe"
+            class="dashboard__iframe"
+            src="https://lookerstudio.google.com/embed/reporting/b48d530d-115b-465b-ba9c-cbf9dd4d50bf/page/8m7qD"
+            frameborder="0"
+            style="border:0"
+            allowfullscreen
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+        ></iframe>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
