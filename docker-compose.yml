@@ -1,5 +1,14 @@
 version: '3.7'
 services:
+  nginx:
+    image: nginxproxy/nginx-proxy:alpine
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
   painel:
     image: ghcr.io/sdw-for-all/painel:latest
     container_name: painel
@@ -7,8 +16,5 @@ services:
       - "80"
     restart: always
     environment:
-      - VIRTUAL_HOST=painel.sdwforall.com
+      - VIRTUAL_HOST=localhost
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=painel.sdwforall.com
-      - LETSENCRYPT_EMAIL=lucas@sdwforall.com
-      - LETSENCRYPT_TEST=false
